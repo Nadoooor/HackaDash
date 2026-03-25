@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Background">#090c1f</color>
+    <color name="transparent">#00F44336</color>
+    <color name="Windows">#22217d</color>
 </resources>

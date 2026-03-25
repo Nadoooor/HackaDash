@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentsdata">
+
+    <fragment
+        android:id="@+id/studentsdata"
+        android:name="com.example.hackadash.Studentsdata"
+        android:label="fragment_studentsdata"
+        tools:layout="@layout/fragment_studentsdata" >
+        <action
+            android:id="@+id/action_studentsdata_to_control"
+            app:destination="@id/control" />
+    </fragment>
+    <fragment
+        android:id="@+id/control"
+        android:name="com.example.hackadash.Control"
+        android:label="fragment_control"
+        tools:layout="@layout/fragment_control" >
+        <action
+            android:id="@+id/action_control_to_studentsdata"
+            app:destination="@id/studentsdata" />
+    </fragment>
+</navigation>

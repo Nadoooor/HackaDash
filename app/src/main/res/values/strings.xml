@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hackadash</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="control">Control</string>
+    <string name="members_data">Members\' Data</string>
 </resources>
