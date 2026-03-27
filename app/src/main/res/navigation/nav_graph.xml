@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_studentsdata_to_control"
             app:destination="@id/control" />
+        <action
+            android:id="@+id/action_studentsdata_to_configuration"
+            app:destination="@id/configuration" />
     </fragment>
     <fragment
         android:id="@+id/control"
@@ -22,5 +25,20 @@
         <action
             android:id="@+id/action_control_to_studentsdata"
             app:destination="@id/studentsdata" />
+        <action
+            android:id="@+id/action_control_to_configuration"
+            app:destination="@id/configuration" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuration"
+        android:name="com.example.hackadash.Configuration"
+        android:label="fragment_configuration"
+        tools:layout="@layout/fragment_configuration" >
+        <action
+            android:id="@+id/action_configuration_to_studentsdata"
+            app:destination="@id/studentsdata" />
+        <action
+            android:id="@+id/action_configuration_to_control"
+            app:destination="@id/control" />
     </fragment>
 </navigation>

@@ -9,7 +9,7 @@
     android:backgroundTint="@color/Background">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appbar_Control"
         android:layout_width="match_parent"
         android:layout_height="82dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,26 +20,30 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/app_bar_image"
+                android:id="@+id/app_bar_image_Control"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="."
                 android:scaleType="centerCrop"
                 android:src="@drawable/gradient_components"
                 app:layout_collapseMode="parallax"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
             <ImageView
-                android:id="@+id/app_bar_image2"
+                android:id="@+id/app_bar_Icon_Control"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:contentDescription="."
                 android:src="@drawable/ic_control"
-                app:layout_constraintBottom_toBottomOf="@+id/app_bar_image"
-                app:layout_constraintEnd_toEndOf="@+id/app_bar_image"
+                app:layout_constraintBottom_toBottomOf="@+id/app_bar_image_Control"
+                app:layout_constraintEnd_toEndOf="@+id/app_bar_image_Control"
                 app:layout_constraintHorizontal_bias="0.03"
-                app:layout_constraintStart_toStartOf="@+id/app_bar_image"
+                app:layout_constraintStart_toStartOf="@+id/app_bar_image_Control"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/white" />
+                app:tint="@color/white"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView"
@@ -51,9 +55,9 @@
                 android:textSize="35sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/app_bar_image"
+                app:layout_constraintEnd_toEndOf="@+id/app_bar_image_Control"
                 app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toEndOf="@+id/app_bar_image2"
+                app:layout_constraintStart_toEndOf="@+id/app_bar_Icon_Control"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -61,7 +65,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollView"
+        android:id="@+id/sV_Control"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"
@@ -76,26 +80,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_Control"
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tV_Cfunction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Function:"
+                android:text="@string/t_Cfunction"
                 android:textColor="#FBF6F6"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/spinner"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
@@ -105,179 +107,59 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/rounded"
                 android:backgroundTint="@color/Elements"
-                app:layout_constraintBottom_toTopOf="@+id/textView3"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintBottom_toTopOf="@+id/tV_CArg1"
+                app:layout_constraintEnd_toStartOf="@+id/guideRight"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-            <EditText
-                android:id="@+id/editTextText"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rounded"
-                android:backgroundTint="@color/Elements"
-                android:ems="10"
-                android:inputType="text"
-                android:padding="10dp"
-                android:text="Type here"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/textView4"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tV_Cfunction" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tV_CArg1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Argument1:"
+                android:text="@string/tV_CArg1name"
                 android:textColor="#FBF6F6"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintBottom_toTopOf="@+id/tF_CArg1"
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
                 app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
             <EditText
-                android:id="@+id/editTextText2"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rounded"
-                android:backgroundTint="@color/Elements"
-                android:ems="10"
-                android:inputType="text"
-                android:padding="10dp"
-                android:text="Type here"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/textView5"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                android:id="@+id/tF_CArg1"
+                android:text="@string/tF_Default"
+                app:layout_constraintBottom_toTopOf="@+id/tV_CArg2"
+                app:layout_constraintEnd_toStartOf="@+id/guideRight"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tV_CArg1"
+                style="@style/textFields" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tV_CArg2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Argument1:"
+                android:text="@string/tV_CArg2name"
                 android:textColor="#FBF6F6"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText2"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                app:layout_constraintBottom_toTopOf="@+id/tF_CArg2"
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tF_CArg1" />
 
             <EditText
-                android:id="@+id/editTextText3"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rounded"
-                android:backgroundTint="@color/Elements"
-                android:ems="10"
-                android:inputType="text"
-                android:padding="10dp"
-                android:text="Type here"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/textView6"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                android:id="@+id/tF_CArg2"
+                style="@style/textFields"
+                android:text="@string/tF_Default"
+                app:layout_constraintEnd_toStartOf="@+id/guideRight"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tV_CArg2" />
 
             <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Argument1:"
-                android:textColor="#FBF6F6"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText3"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
-
-            <EditText
-                android:id="@+id/editTextText4"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/rounded"
-                android:backgroundTint="@color/Elements"
-                android:ems="10"
-                android:inputType="text"
-                android:padding="10dp"
-                android:text="Type here"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toTopOf="@+id/textView7"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Argument1:"
-                android:textColor="#FBF6F6"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText4"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
-
-            <EditText
-                android:id="@+id/editTextText5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded"
-                android:backgroundTint="@color/Background"
-                android:clickable="true"
-                android:cursorVisible="false"
-                android:editable="false"
-                android:ems="10"
-                android:focusable="true"
-                android:gravity="top|start"
-                android:inputType="textMultiLine"
-                android:minHeight="190dp"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="10dp"
-                android:text="@string/Lorem"
-                android:textColor="#3FB30F"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/tV_CLogs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -285,12 +167,54 @@
                 android:textColor="#FBF6F6"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/editTextText5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+                app:layout_constraintBottom_toTopOf="@+id/tF_CLogs"
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tF_CArg2"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/tF_CLogs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded"
+                android:backgroundTint="@color/Background"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:minHeight="190dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/tF_CLogsText"
+                android:textColor="#3FB30F"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideRight"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tV_CLogs" />
+
+
+            <Button
+                android:id="@+id/bT_CRun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:text="Run Function"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/guideRight"
+                app:layout_constraintStart_toStartOf="@+id/guideLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tF_CLogs"
+                tools:ignore="HardcodedText" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline4"
+                android:id="@+id/guideLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -298,13 +222,12 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline3"
+                android:id="@+id/guideRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.95"
                 app:layout_constraintStart_toStartOf="parent" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

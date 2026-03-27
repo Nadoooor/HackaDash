@@ -1,12 +1,14 @@
-package com.example.hackadash
+    package com.example.hackadash
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 
-// TODO: Rename parameter arguments, choose names that match
+    // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -30,10 +32,15 @@ class Control : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+//        val spinner = view.findViewById<Spinner>(R.id.)
+        val functions = arrayOf("GetClassroom IDs", "GetMembers Data", "SyncClassroom Data")
+
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, functions)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
         return inflater.inflate(R.layout.fragment_control, container, false)
     }
 

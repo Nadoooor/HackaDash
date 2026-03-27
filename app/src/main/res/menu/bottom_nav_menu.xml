@@ -11,4 +11,9 @@
         android:icon="@drawable/ic_control"
         android:id="@+id/control"
         />
+    <item
+        android:title="@string/congiftxt"
+        android:icon="@drawable/ic_config"
+        android:id="@+id/configuration"
+        />
 </menu>

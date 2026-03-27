@@ -4,4 +4,29 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="control">Control</string>
     <string name="members_data">Members\' Data</string>
+    <string name="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique volutpat nulla, vitae rutrum metus sodales a. Phasellus eget urna nec nunc blandit sodales. Praesent finibus enim non est egestas bibendum. Suspendisse lectus tellus, suscipit a congue id, interdum eget nunc. Mauris a feugiat risus. Curabitur quis eros sit amet tortor facilisis volutpat. Proin sed suscipit tortor, in aliquet ex. Phasellus aliquam rhoncus nisl. Suspendisse nulla augue, sagittis quis porta sit amet, sollicitudin quis tortor. Duis vestibulum mattis quam, quis cursus nibh pharetra quis. Ut ac convallis sem. Aenean id pharetra metus, quis scelerisque dolor. In vitae semper nisl.\n\nSed pellentesque efficitur semper. Nullam eu interdum lacus. Nunc sit amet est in orci egestas egestas. Ut leo massa, vulputate sit amet vehicula id, molestie eu nisi. Donec ac ultricies est. Integer ullamcorper finibus tortor non dapibus. Sed vel sem elit. Nunc ac pulvinar sem, non tristique elit. Morbi dignissim consectetur nibh, eget scelerisque est vestibulum vel. Sed in nulla sapien. Duis ac turpis sem. Donec quis mi ut magna accumsan semper sed sed felis. Suspendisse non tellus lacinia, hendrerit leo quis, finibus purus.\n\nNullam vitae eleifend velit, eget ullamcorper justo. Cras commodo lacinia justo, rutrum vehicula lacus pretium at. Vestibulum feugiat pretium ante, vitae aliquet elit posuere sit amet. Phasellus eget lobortis ex, et efficitur tortor. Ut non odio quis metus malesuada sagittis vel et velit. Sed auctor ex nec magna accumsan ornare. Quisque sollicitudin nisi in malesuada molestie. Fusce euismod eleifend felis. Nam congue euismod est non blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\nVestibulum facilisis lacus est, nec faucibus mi feugiat eu. Morbi ex nunc, mollis efficitur quam a, bibendum interdum est. Aenean in lorem id eros pretium viverra. Curabitur ut condimentum massa. Maecenas nulla arcu, ornare vitae arcu sit amet, porttitor maximus urna. Integer pellentesque.</string>
+    <string name="t_Cfunction">Function:</string>
+    <string name="tF_Default">Type here</string>
+    <string name="tV_CArg1name">Argument1:</string>
+    <string name="tV_CArg2name">Argument2:</string>
+    <string name="tV_CArg3name">Argument3:</string>
+    <string name="tV_CArg4name">Argument4:</string>
+    <string name="tF_CLogsText">Logs will appear here.</string>
+    <string name="congiftxt">Configuration</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="tV_cfgWepapp">WebApp Deployment Link:</string>
+    <string name="tV_cfgCID">ClassroomID:</string>
 </resources>
