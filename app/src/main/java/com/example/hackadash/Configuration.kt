@@ -12,6 +12,8 @@ import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import org.w3c.dom.Text
 import androidx.core.content.edit
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 private const val ARG_Webapp_Link = "webApp"
 private const val ARG_Classroom_ID = "cID"
@@ -24,8 +26,9 @@ class Configuration : Fragment() {
         private const val PREF = "HackaDashpref"
         private const val KURL = "Type Link here"
         private const val KCID = "Type ClassroomID here"
+        private const val KSHEET = "here"
 
-        fun save(context: Context, url: String?, cid: String? ){
+        fun save(context: Context, url: String?, cid: String?){
             val shared = context.getSharedPreferences(PREF, Context.MODE_PRIVATE)
             shared.edit {
                 putString(KURL, url)
@@ -33,6 +36,26 @@ class Configuration : Fragment() {
                 apply()
             }
         }
+
+        fun savesheet(con: Context, sheet: List<Map<String, Any>>?){
+            val shared = con.getSharedPreferences(PREF, Context.MODE_PRIVATE)
+            val jsonsheet = Gson().toJson(sheet)
+            shared.edit {
+                putString(KSHEET, jsonsheet)
+                apply()
+            }
+        }
+
+        fun GetSheet (con: Context): List<Map<String, Any>>? {
+            val shared = con.getSharedPreferences(PREF, Context.MODE_PRIVATE)
+            val jsonsheet = shared.getString(KSHEET, null) ?: return null
+
+            val type = object : TypeToken<List<Map<String, Any>>>() {}.type
+
+            return Gson().fromJson(jsonsheet, type)
+        }
+
+
 
         fun loadURL(context: Context): String?{
             val shared = context.getSharedPreferences(PREF, Context.MODE_PRIVATE)

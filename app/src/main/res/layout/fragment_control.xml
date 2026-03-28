@@ -78,10 +78,8 @@
         android:scrollbarStyle="insideInset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar_Control"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/appbar_Control">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -128,13 +126,13 @@
 
             <EditText
                 android:id="@+id/tF_CArg1"
+                style="@style/textFields"
                 android:text="@string/tF_Default"
                 app:layout_constraintBottom_toTopOf="@+id/tV_CArg2"
                 app:layout_constraintEnd_toStartOf="@+id/guideRight"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="@+id/guideLeft"
-                app:layout_constraintTop_toBottomOf="@+id/tV_CArg1"
-                style="@style/textFields" />
+                app:layout_constraintTop_toBottomOf="@+id/tV_CArg1" />
 
             <TextView
                 android:id="@+id/tV_CArg2"

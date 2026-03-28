@@ -65,7 +65,7 @@ class Control : Fragment() {
         val arg1text = view.findViewById<TextView>(R.id.tV_CArg1)
         val arg2text = view.findViewById<TextView>(R.id.tV_CArg2)
 
-        val functions = arrayOf("Choose a function" ,"GetClassroomsIDs", "GetMembersData", "SyncClassroomData", "GetSheetData")
+        val functions = arrayOf("Choose a function" ,"GetClassroomsIDs", "GetClassroomMembersData", "SyncSheet&Classroom")
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, functions)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
@@ -84,7 +84,7 @@ class Control : Fragment() {
     private fun call(URL: String, action: String, CID: String?, LOGwin: EditText){
         val cl = OkHttpClient()
         var Urlreq = "$URL?action=$action"
-        if (action == "SyncClassroomData" || action == "GetMembersData"){
+        if (action == "SyncSheet&Classroom" || action == "GetClassroomMembersData"){
             Urlreq += "&cid=$CID"
         }
         val request = Request.Builder().url(Urlreq).build()
@@ -109,7 +109,7 @@ class Control : Fragment() {
                             }
                         }
                         LOGwin.setText(courses)
-                    } else if (action == "GetMembersData"){
+                    } else if (action == "GetClassroomMembersData"){
                         val type = object : TypeToken<List<Things>>() {}.type
                         val list: List<Things> = gson.fromJson(json, type)
                         var IDs = ""
@@ -120,12 +120,9 @@ class Control : Fragment() {
                             }
                         }
                         LOGwin.setText(IDs)
-                    } else if (action == "SyncClassroomData") {
+                    } else if (action == "SyncSheet&Classroom") {
                         LOGwin.setText(json)
 
-                    } else if(action == "GetSheetData"){
-
-                    LOGwin.setText(json)
                     } else {
                         Toast.makeText(requireContext(), "Please choose a function", Toast.LENGTH_LONG).show()
 
