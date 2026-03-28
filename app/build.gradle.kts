@@ -44,6 +44,8 @@ dependencies {
     implementation(libs.androidx.fragment)
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.jjoe64:graphview:4.2.2")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.7")
     implementation(libs.androidx.legacy.support.v4)
