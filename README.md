@@ -4,7 +4,7 @@ An android application that has act as a dashboard for mentors in a track that f
 
 ## Configuration:
 ---------------------
-1. Uses these [google sheets](https://docs.google.com/spreadsheets/d/1A0_aaVznpAPzczByhRMdM-Pz52NpEHugwK7nPoqUc-0/edit?usp=sharing) and Appscript (You will find it inside the sheet) templates for your track.
+1. Use these [google sheets](https://docs.google.com/spreadsheets/d/1A0_aaVznpAPzczByhRMdM-Pz52NpEHugwK7nPoqUc-0/edit?usp=sharing) and Appscript (You will find it inside the sheet) templates for your track.
 2. Open the appscript code and click on the deploy on top bar.
 3. create new and choose web app
 4. make a new deployment and make it (Execute as: me), (Who can access: Anyone).
